@@ -1,0 +1,116 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fafaf9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f4c5c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #134e4a;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}
+
+/* FAQ Accordion Animation */
+.faq-content {
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-content:not(.hidden) {
+    max-height: 500px;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate-45 {
+    transform: rotate(45deg);
+}
+
+/* Service Card Hover Effects */
+.service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Modal Animation */
+#modal-content {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#modal-content.scale-100 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Custom Selection Color */
+::selection {
+    background-color: #d8f0f2;
+    color: #0f4c5c;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+    outline: 2px solid #0f4c5c;
+    outline-offset: 2px;
+}
+
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .fixed {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}

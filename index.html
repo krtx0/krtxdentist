@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. KRTX's Dental Clinic | Advanced Dentistry & Gentle Care</title>
+    <meta name="description" content="Premium dental care by Dr. KRTX , Gold Medalist dentist. Specializing in pediatric & preventive dentistry. Book your appointment today.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0f9fa',
+                            100: '#d8f0f2',
+                            500: '#0f766e',
+                            600: '#0d5c56',
+                            800: '#134e4a',
+                            900: '#0f4c5c',
+                        },
+                        warm: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-stone-700 bg-warm-50 antialiased selection:bg-medical-100 selection:text-medical-900">
+
+    <!-- Header -->
+   <custom-navbar></custom-navbar>
+
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-medical-50/50 to-warm-50 -z-10"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-medical-100/20 to-transparent -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="reveal-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-medical-100 text-medical-800 text-sm font-medium mb-6 shadow-sm">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        <span>Gold Medalist Dentist & Pediatric Specialist</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-semibold text-stone-800 leading-tight mb-6">
+                        Advanced Dentistry.<br>
+                        <span class="text-medical-800">Gentle Care.</span><br>
+                        Confident Smiles.
+                    </h1>
+                    <p class="text-lg text-stone-600 mb-8 leading-relaxed max-w-lg">
+                        Led by Dr. KRTX , experience personalized, anxiety-free dental care combining modern technology with compassionate treatment for your entire family.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-medical-800 text-white px-8 py-4 rounded-full font-medium hover:bg-medical-900 transition-all hover:shadow-xl hover:shadow-medical-800/20">
+                            <span>Book Appointment</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white text-stone-700 border border-stone-200 px-8 py-4 rounded-full font-medium hover:bg-stone-50 transition-all">
+                            <span>Explore Services</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Signals -->
+                    <div class="mt-12 flex items-center gap-8 text-sm text-stone-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-600"></i>
+                            <span>10+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-600"></i>
+                            <span>5000+ Happy Patients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative reveal-on-scroll delay-200">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.pexels.com/photos/6627413/pexels-photo-6627413.jpeg" alt="Dr. KRTX  - Professional Dental Care" class="w-full h-[600px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-medical-900/20 to-transparent"></div>
+                    </div>
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-stone-100 max-w-xs hidden lg:block">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-800">
+                                <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-stone-800">Expert Care</p>
+                                <p class="text-sm text-stone-500 mt-1">Specialized in pediatric & preventive dentistry with modern techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal-on-scroll">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-medical-100 rounded-3xl -z-10 transform -rotate-2"></div>
+                        <img src="https://images.pexels.com/photos/5355837/pexels-photo-5355837.jpeg" alt="Modern Dental Clinic Interior" class="rounded-3xl shadow-lg w-full">
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 reveal-on-scroll">
+                    <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">About Dr. KRTX</span>
+                    <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-6">Gold Medalist Dentist Committed to Your Family's Oral Health</h2>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        Dr. KRTX  brings exceptional expertise and a gentle touch to every procedure. As a gold medalist in dentistry with specialized training in Pediatric and Preventive Dentistry, she believes in creating positive dental experiences that last a lifetime.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed mb-8">
+                        Her philosophy centers on personalized treatment plans that address each patient's unique needs, from the youngest family members to adults seeking advanced cosmetic or restorative solutions.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-medical-50 flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800">Gold Medalist</h4>
+                                <p class="text-sm text-stone-500">Academic Excellence</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-medical-50 flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="baby" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800">Pediatric Expert</h4>
+                                <p class="text-sm text-stone-500">Child-Friendly Care</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-medical-50 flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="microscope" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800">Modern Techniques</h4>
+                                <p class="text-sm text-stone-500">Advanced Technology</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-medical-50 flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="heart" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800">Gentle Approach</h4>
+                                <p class="text-sm text-stone-500">Anxiety-Free Treatment</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical-800 font-semibold hover:gap-3 transition-all">
+                        <span>Schedule a Consultation</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 lg:py-32 bg-warm-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">Comprehensive Care</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-4">Expert Dental Services for Every Age</h2>
+                <p class="text-stone-600">From preventive care to advanced restorative treatments, we offer a full spectrum of dental services using the latest technology and techniques.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Preventive Dentistry -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('preventive')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Preventive Dentistry</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Regular checkups, professional cleaning, and oral hygiene guidance to prevent dental issues before they start.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Pediatric Dentistry -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('pediatric')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="smile" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Pediatric Dentistry</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Child-focused treatments in an anxiety-free environment. Gentle care that builds positive dental habits for life.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Root Canal -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('rct')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="target" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Root Canal Treatment</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Precision techniques for pain relief and tooth preservation. Advanced RCT with minimal discomfort.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Restorative -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('restorative')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="puzzle" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Restorative Dentistry</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Fillings, crowns, and bridges that restore function and aesthetics. Durable, natural-looking solutions.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Cosmetic -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('cosmetic')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Cosmetic Dentistry</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Teeth whitening, smile makeovers, and aesthetic enhancements for a confident, radiant smile.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Orthodontics -->
+                <div class="service-card group bg-white rounded-2xl p-8 border border-stone-100 hover:border-medical-200 hover:shadow-xl hover:shadow-medical-800/5 transition-all duration-300 cursor-pointer reveal-on-scroll" onclick="openServiceModal('orthodontics')">
+                    <div class="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-800 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="align-center-horizontal" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-stone-800 mb-3">Orthodontics</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">Traditional braces and clear aligners for precise alignment correction and optimal bite function.</p>
+                    <div class="flex items-center gap-2 text-medical-800 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-on-scroll">
+                    <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">Why Choose Us</span>
+                    <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-6">A Clinic Designed Around Your Comfort</h2>
+                    <p class="text-stone-600 leading-relaxed mb-8">
+                        We combine clinical excellence with a warm, welcoming environment. Every detail of our practice is designed to ensure you feel safe, comfortable, and confident in your care.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-warm-50 transition-colors">
+                            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="baby" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800 mb-1">Child-Friendly Environment</h4>
+                                <p class="text-stone-600 text-sm">Specially designed pediatric zone with gentle approach techniques to eliminate dental anxiety in children.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-warm-50 transition-colors">
+                            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800 mb-1">Modern Equipment</h4>
+                                <p class="text-stone-600 text-sm">Digital X-rays, intraoral cameras, and advanced diagnostic tools for precise, efficient treatment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-warm-50 transition-colors">
+                            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="user-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800 mb-1">Personalized Care</h4>
+                                <p class="text-stone-600 text-sm">Treatment plans tailored to your specific needs, lifestyle, and comfort preferences.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-warm-50 transition-colors">
+                            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-800 flex-shrink-0">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-stone-800 mb-1">Rigorous Hygiene Standards</h4>
+                                <p class="text-stone-600 text-sm">Hospital-grade sterilization protocols and single-use instruments where applicable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative reveal-on-scroll delay-200">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.pexels.com/photos/305567/pexels-photo-305567.jpeg" alt="Modern Dental Equipment" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="https://images.pexels.com/photos/3952016/pexels-photo-3952016.jpeg" alt="Comfortable Treatment Room" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                        <img src="https://images.pexels.com/photos/6502635/pexels-photo-6502635.jpeg" alt="Advanced Dental Technology" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="https://images.pexels.com/photos/4269944/pexels-photo-4269944.jpeg" alt="Sterile Environment" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                    </div>
+                    <div class="absolute -z-10 inset-0 bg-medical-100 rounded-3xl transform rotate-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Experience Flow -->
+    <section id="process" class="py-20 lg:py-32 bg-medical-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">Your Journey</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-4">Seamless Care Experience</h2>
+                <p class="text-stone-600">From your first consultation to follow-up care, we've designed every step to be comfortable and transparent.</p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-8 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-medical-200"></div>
+                
+                <div class="relative text-center reveal-on-scroll">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-2 border-medical-200 flex items-center justify-center text-medical-800 mb-4 relative z-10 shadow-sm">
+                        <i data-lucide="clipboard-list" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-semibold text-stone-800 mb-2">1. Consultation</h4>
+                    <p class="text-sm text-stone-600">Comprehensive discussion of your concerns and dental history</p>
+                </div>
+                
+                <div class="relative text-center reveal-on-scroll delay-100">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-2 border-medical-200 flex items-center justify-center text-medical-800 mb-4 relative z-10 shadow-sm">
+                        <i data-lucide="scan" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-semibold text-stone-800 mb-2">2. Diagnosis</h4>
+                    <p class="text-sm text-stone-600">Digital X-rays and thorough examination using modern tools</p>
+                </div>
+                
+                <div class="relative text-center reveal-on-scroll delay-200">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-2 border-medical-200 flex items-center justify-center text-medical-800 mb-4 relative z-10 shadow-sm">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-semibold text-stone-800 mb-2">3. Treatment Plan</h4>
+                    <p class="text-sm text-stone-600">Personalized plan with clear explanations and options</p>
+                </div>
+                
+                <div class="relative text-center reveal-on-scroll delay-300">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-2 border-medical-200 flex items-center justify-center text-medical-800 mb-4 relative z-10 shadow-sm">
+                        <i data-lucide="heart-pulse" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-semibold text-stone-800 mb-2">4. Procedure</h4>
+                    <p class="text-sm text-stone-600">Gentle, precise treatment with comfort management</p>
+                </div>
+                
+                <div class="relative text-center reveal-on-scroll delay-400">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-2 border-medical-200 flex items-center justify-center text-medical-800 mb-4 relative z-10 shadow-sm">
+                        <i data-lucide="phone-call" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-semibold text-stone-800 mb-2">5. Follow-up</h4>
+                    <p class="text-sm text-stone-600">Post-treatment care and regular check-in calls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">Testimonials</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-4">What Our Patients Say</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-warm-50 p-8 rounded-2xl reveal-on-scroll">
+                    <div class="flex gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 mb-6 leading-relaxed">"Dr. KRTX made my daughter's first dental visit absolutely wonderful. Her patience and gentle approach eliminated all fear. The clinic is spotless and modern."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-medical-200 rounded-full flex items-center justify-center text-medical-800 font-semibold">P</div>
+                        <div>
+                            <p class="font-semibold text-stone-800">Priya Sharma</p>
+                            <p class="text-sm text-stone-500">Mother of 6-year-old</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-warm-50 p-8 rounded-2xl reveal-on-scroll delay-100">
+                    <div class="flex gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 mb-6 leading-relaxed">"The root canal treatment was completely painless. Dr. KRTX explained every step, and the technology they use is truly advanced. Highly recommend for anyone with dental anxiety."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-medical-200 rounded-full flex items-center justify-center text-medical-800 font-semibold">R</div>
+                        <div>
+                            <p class="font-semibold text-stone-800">Rahul Mehta</p>
+                            <p class="text-sm text-stone-500">Business Executive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-warm-50 p-8 rounded-2xl reveal-on-scroll delay-200">
+                    <div class="flex gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 mb-6 leading-relaxed">"Finally found a dentist who listens! My smile makeover exceeded expectations. The attention to detail and hygiene standards are exceptional. Worth every penny."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-medical-200 rounded-full flex items-center justify-center text-medical-800 font-semibold">A</div>
+                        <div>
+                            <p class="font-semibold text-stone-800">Ananya Patel</p>
+                            <p class="text-sm text-stone-500">Interior Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 lg:py-32 bg-warm-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <span class="text-medical-800 font-semibold tracking-wider uppercase text-sm">FAQ</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold text-stone-800 mt-3 mb-4">Common Questions</h2>
+                <p class="text-stone-600">Addressing your concerns about dental care and visits.</p>
+            </div>
+
+            <div class="space-y-4 reveal-on-scroll">
+                <div class="faq-item bg-white rounded-xl border border-stone-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-warm-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-stone-800">Is the clinic environment suitable for anxious patients?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-medical-800 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 leading-relaxed">
+                        Absolutely. We specialize in anxiety-free dentistry. Our clinic is designed to be calming, we use gentle techniques, and for pediatric patients, we employ behavior management strategies that make dental visits positive experiences.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-stone-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-warm-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-stone-800">What sterilization protocols do you follow?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-medical-800 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 leading-relaxed">
+                        We maintain hospital-grade sterilization standards. All instruments undergo autoclave sterilization, surfaces are disinfected between patients, and we use single-use items wherever possible. Your safety is our top priority.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-stone-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-warm-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-stone-800">Do you offer emergency dental services?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-medical-800 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 leading-relaxed">
+                        Yes, we accommodate dental emergencies during our working hours. For severe emergencies like trauma or uncontrolled bleeding, we ensure same-day appointments. Call us immediately at +91 8369013101.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-stone-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-warm-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-stone-800">What payment options are available?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-medical-800 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 leading-relaxed">
+                        We accept cash, all major credit/debit cards, UPI payments, and major dental insurance plans. For extensive treatments, we offer flexible payment plans to ensure quality care is accessible.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-stone-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-warm-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-stone-800">At what age should my child first visit the dentist?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-medical-800 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 leading-relaxed">
+                        We recommend the first dental visit by age 1 or within 6 months of the first tooth erupting. Early visits help prevent problems and establish positive dental habits. Dr. KRTX is specially trained to make these first visits enjoyable.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 lg:py-32 bg-medical-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white reveal-on-scroll">
+                    <h2 class="text-3xl lg:text-5xl font-semibold mb-6">Book Your Appointment Today</h2>
+                    <p class="text-medical-100 text-lg mb-8 leading-relaxed">
+                        Take the first step towards a healthier, more confident smile. Our team is ready to provide you and your family with exceptional dental care.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-medical-200 text-sm">Location</p>
+                                <p class="text-white font-medium">123 Healthcare Avenue, Andheri West, Mumbai 400053</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-medical-200 text-sm">Working Hours</p>
+                                <p class="text-white font-medium">Mon - Sat: 10:00 AM - 8:00 PM | Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-medical-200 text-sm">Contact</p>
+                                <p class="text-white font-medium">+91 8369013101</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/918369013101" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white text-medical-800 px-8 py-4 rounded-full font-semibold hover:bg-medical-50 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Book via WhatsApp</span>
+                        </a>
+                        <a href="tel:+918369013101" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl reveal-on-scroll delay-200">
+                    <h3 class="text-2xl font-semibold text-stone-800 mb-6">Request Appointment</h3>
+                    <form id="appointment-form" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-stone-700 mb-1">Full Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-stone-700 mb-1">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all" placeholder="+91 8369013101">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all" placeholder="your@email.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-1">Service Interested In</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all bg-white">
+                                <option>General Checkup</option>
+                                <option>Pediatric Dentistry</option>
+                                <option>Root Canal Treatment</option>
+                                <option>Cosmetic Dentistry</option>
+                                <option>Orthodontics / Braces</option>
+                                <option>Teeth Whitening</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-1">Preferred Date</label>
+                            <input type="date" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-1">Message (Optional)</label>
+                            <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-medical-500 focus:ring-2 focus:ring-medical-200 outline-none transition-all resize-none" placeholder="Tell us about your concerns..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-medical-800 text-white py-4 rounded-xl font-semibold hover:bg-medical-900 transition-all hover:shadow-lg flex items-center justify-center gap-2">
+                            <span>Submit Request</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                        
+                        <p class="text-xs text-stone-500 text-center mt-4">
+                            We will confirm your appointment within 24 hours via phone or WhatsApp.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Floating Quick Book Button (Mobile) -->
+    <div class="md:hidden fixed bottom-6 right-6 z-40">
+        <a href="#contact" class="w-14 h-14 bg-medical-800 text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform">
+            <i data-lucide="calendar" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm" onclick="closeServiceModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">
+            <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto pointer-events-auto shadow-2xl transform transition-all scale-95 opacity-0" id="modal-content">
+                <div class="sticky top-0 bg-white border-b border-stone-100 p-6 flex justify-between items-center">
+                    <h3 id="modal-title" class="text-2xl font-semibold text-stone-800">Service Details</h3>
+                    <button onclick="closeServiceModal()" class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center hover:bg-stone-200 transition-colors">
+                        <i data-lucide="x" class="w-5 h-5 text-stone-600"></i>
+                    </button>
+                </div>
+                <div class="p-6" id="modal-body">
+                    <!-- Content injected via JS -->
+                </div>
+                <div class="p-6 border-t border-stone-100 bg-warm-50">
+                    <a href="#contact" onclick="closeServiceModal()" class="block w-full bg-medical-800 text-white text-center py-4 rounded-xl font-semibold hover:bg-medical-900 transition-colors">
+                        Book This Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
